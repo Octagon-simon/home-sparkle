@@ -1,5 +1,6 @@
 import Image from 'next/image'
-// import styles from './page.module.css'
+import '@/styles/root.css'
+import styles from './page.module.css'
 
 export default function Home() {
   return (
@@ -10,30 +11,30 @@ export default function Home() {
             <section className="section-content has-text-centered">
               <h1 className="title home-title is-1">Offers commercial and domestic cleaning services</h1>
               <p className='has-text-white content'>Transforming chaos into clean, one space at a time. your trusted partner for immaculate spaces.</p>
-              <div class="frame-wrapper" style={{ maxWidth: "700px", margin: "auto" }}>
-                <div class="frame-container">
-                  <div className='frame-item'>
+              <div className={styles.frameWrapper} style={{ maxWidth: "700px", margin: "auto" }}>
+                <div className={styles.frameContainer}>
+                  <div className={styles.frameItem}>
                     <span className='icon'>
                       <Image width={15} height={15} alt='' src="/search-icon.svg" />
                     </span>
-                    <input type="text" className="location-input" id="location-input" placeholder="Enter your location" />
+                    <input type="text" className={styles.locationInput} id="location-input" placeholder="Enter your location" />
                   </div>
-                  <div class="frame-item">
+                  <div className={styles.frameItem}>
                     <span className='icon'>
                       <Image width={15} height={15} alt='' src="/book.svg" />
                     </span>
-                    <div class="dropdown-select">
-                      <select className='hero-dropdown'>
+                    <div className={styles.dropdownSelect}>
+                      <select className={styles.dropdown}>
                         <option value="male">Type of service</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                       </select>
-                      <div class="arrow-down">
+                      <div className={styles.arrowDown}>
                         <img src="/arrow-down.svg" alt="Arrow Icon" />
                       </div>
                     </div>
                   </div>
-                  <div class="frame-item">
+                  <div className={styles.frameItem}>
                     <button className='button btn-brand'>Request</button>
                   </div>
                 </div>
@@ -41,7 +42,91 @@ export default function Home() {
             </section>
           </div>
         </div >
-      </section >
+      </section>
+      <section className='section'>
+        <div className='container'>
+          <div className='columns is-flex-direction-row-reverse'>
+            <div className='column is-6'>
+              <div className='section-content'>
+                <p className='text-primary mb-2'>ABOUT HOMESPARKLE SOLUTION</p>
+                <h3 className='title is-3 fw-bold'>Why Choose Us?</h3>
+              </div>
+              <div className='section-content'>
+                <p className='has-text-black-black5'>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. Tinat makrokirat såsom multinar. Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. Tinat makrokirat såsom multinar. </p>
+              </div>
+              <div className='section-content'>
+                <div className={`is-flex is-justify-content-space-between ${styles.projectsCompleted}`}>
+                  <div className={styles.projectsCompletedItem}>
+                    <p>4000+</p>
+                    <p>Projects Completed</p>
+                  </div>
+                  <div className={styles.projectsCompletedItem}>
+                    <p>25</p>
+                    <p>Cities covered wiithin the UK</p>
+                  </div>
+                  <div className={styles.projectsCompletedItem}>
+                    <p>12</p>
+                    <p>Awards earned</p>
+                  </div>
+                </div>
+              </div>
+              <div className='section-content'>
+                <button className='button btn-brand is-outline'>
+                  Read more about us
+                  <span className='icon'>
+                    <Image src="/arrow-right.svg" width={20} height={20} />
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div className='column is-6'>
+              <Image src="/why-choose-us.png" width={500} height={500} />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='section'>
+        <div className='container'>
+          <div className='section-content'>
+            <p className='text-primary mb-2'>SERVICES</p>
+            <h3 className='title is-3 fw-bold'>What services do we offer?</h3>
+          </div>
+
+          <div className={`mt-4 ${styles.serviceCardWrapper}`}>
+            <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
+              <div className={styles.serviceCardIcon}>
+                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+              </div>
+              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
+              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+            </div>
+            <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
+              <div className={styles.serviceCardIcon}>
+                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+              </div>
+              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
+              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+            </div>
+          </div>
+          <div className={`mt-4 ${styles.serviceCardWrapper}`}>
+            <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
+              <div className={styles.serviceCardIcon}>
+                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+              </div>
+              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
+              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+            </div>
+            <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
+              <div className={styles.serviceCardIcon}>
+                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+              </div>
+              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
+              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
     </main >
   )
 }

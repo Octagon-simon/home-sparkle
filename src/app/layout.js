@@ -1,3 +1,4 @@
+import '@/styles/root.css'
 import '@/styles/app.css'
 
 import Navbar from '@/components/Navbar'

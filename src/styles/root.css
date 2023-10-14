@@ -1,0 +1,68 @@
+:root {
+    --brand: #33B5FF;
+
+    /* fonts */
+    --typescale-body1-bold: Satoshi;
+    --font-roboto: Roboto;
+
+    /* font sizes */
+    --typescale-body3-medium-size: 16px;
+    --typescale-semi-header2-bold-size: 32px;
+    --typescale-body1-bold-size: 24px;
+    --typescale-body2-medium-size: 20px;
+    --typescale-semi-header1-bold-size: 40px;
+    --typescale-header2-bold-size: 64px;
+    --font-size-sm: 14px;
+    --font-size-xs: 12px;
+
+    /* Colors */
+    --white-white1: #fdfdfd;
+    --black-black5: #7a7a7a;
+    --black-black1: #131313;
+    
+    --black1: #060607;
+    
+    --color-gray-100: rgba(253, 253, 253, 0.32);
+    --color-darkslategray-100: #494c4f;
+    --black-black3: #3d3d3d;
+    --white-white-5: #e6e6e6;
+    --brand: #33b5ff;
+    --color-white: #fff;
+    --color-aliceblue: #ebf8ff;
+
+    /* Gaps */
+    --gap-21xl: 40px;
+    --gap-127xl: 146px;
+    --gap-base: 16px;
+    --gap-5xs: 8px;
+    --gap-79xl: 98px;
+    --gap-5xl: 24px;
+    --gap-xs: 12px;
+    --gap-435xl: 454px;
+    --gap-61xl: 80px;
+    --gap-13xl: 32px;
+    --gap-11xs: 2px;
+    --gap-4xs: 9px;
+
+    /* Paddings */
+    --padding-45xl: 64px;
+    --padding-81xl: 100px;
+    --padding-xs: 12px;
+    --padding-base: 16px;
+    --padding-5xs: 8px;
+    --padding-50xl: 69px;
+    --padding-21xl: 40px;
+    --padding-xl: 20px;
+    --padding-5xl: 24px;
+
+    /* Border radiuses */
+    --br-13xl: 32px;
+    --br-base: 16px;
+    --br-5xs: 8px;
+
+    /* Effects */
+    --shadow-shadow-4: 0px 6px 12px -6px rgba(24, 39, 75, 0.12),
+        0px 8px 24px -4px rgba(24, 39, 75, 0.08);
+    --shadow-shadow-8: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+        0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+}
