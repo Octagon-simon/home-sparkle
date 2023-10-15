@@ -16,16 +16,18 @@
     --font-size-xs: 12px;
 
     /* Colors */
-    --white-white1: #fdfdfd;
+    --white1: #fdfdfd;
+    --white2: #e6e6e6;
+
     --black-black5: #7a7a7a;
     --black-black1: #131313;
     
     --black1: #060607;
+    --black2: #7a7a7a;
     
     --color-gray-100: rgba(253, 253, 253, 0.32);
     --color-darkslategray-100: #494c4f;
     --black-black3: #3d3d3d;
-    --white-white-5: #e6e6e6;
     --brand: #33b5ff;
     --color-white: #fff;
     --color-aliceblue: #ebf8ff;

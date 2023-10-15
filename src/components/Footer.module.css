@@ -1,0 +1,80 @@
+.footer {
+    background-color: var(--black1);
+    padding: 1.5rem 1.5rem;
+    color: var(--white1);
+    font-size: 0.95rem !important;
+}
+
+
+.rights {
+    color: var(--black2) !important;
+}
+
+.footerLink {
+    color: var(--white1);
+}
+
+.aboutText {
+    max-width: 480px;
+    font-size: 1.5rem;
+    line-height: 40px;
+    font-weight: 500;
+    color: var(--white2) !important;
+}
+
+.newsInputWrapper {
+    padding: 0 0 10px 0;
+    display: flex;
+    border-bottom: 2px solid var(--black2);
+    max-width: 250px;
+    justify-content: space-between;
+    /* margin: auto; */
+}
+
+.newsInput {
+    background-color: transparent;
+    border: none;
+}
+
+.newsInput::placeholder {
+    color: var(--black2);
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+
+    .brandImage {
+        width: 80px;
+        height: 80px;
+    }
+
+    .aboutText {
+        font-size: 1.1rem;
+        line-height: 25px;
+    }
+
+    .newsInputWrapper {
+        max-width: 100%;
+    }
+
+    .footerNav {
+        display: flex;
+        /* Allow child elements to wrap to the next row */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footerNavColumn {
+        /* Each child takes up 50% of the parent's width with spacing in between */
+        flex: calc(50% - 10px);
+        /* Margin to create space between child elements */
+        margin: 5px;
+    }
+
+    .footerNavColumn:nth-child(3) ul {
+        display: inline-flex;
+        gap: 25px;
+        width: 100%;
+    }
+
+}

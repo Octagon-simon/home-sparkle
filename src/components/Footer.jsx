@@ -1,76 +1,91 @@
 import Image from 'next/image';
+import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
-        <footer className="footer">
+        <footer className={styles.footer}>
             <div className="container">
-                <div className="columns is-multiline">
-                    <div className="column is-7">
-                        <a target="_blank" rel="noopener" className="mb-4 is-inline-block" href="./">
-                            <Image loading="lazy" width="120" height="100" src="/nav-typo-logo-white.webp" alt="KaboCash Logo" />
-                        </a>
-                        <p className="mb-4">
-                            We help you send and receive money across Africa quickly and without stress.
+                <div className="columns is-flex-direction-row-reverse">
+                    <div className="column is-5 has-text-right-desktop">
+                        <Image className={styles.brandImage} src="/logo-dark.png" width={150} height={150} alt='' />
+                    </div>
+                    <div className="column is-7 iss-flex is-align-self-center is-justify-content-center">
+                        <p className={styles.aboutText}>
+                            With a passion for cleanliness and a commitment to excellence, we offer top-tier cleaning services
                         </p>
-                        <div>
-                            <a target="_blank" rel="noopener" aria-label="Follow us on Facebook" className="mr-3 is-inline-block" href="#">
-                                <i className="mx-auto social image is-fullwidth bx bxl-facebook"></i>
-                            </a>
-                            <a target="_blank" rel="noopener" aria-label="Follow us on Twitter" className="mr-3 is-inline-block" href="https://twitter.com/kabocashapp">
-                                {/* <i className="mx-auto social image is-fullwidth bx bxl-twitter"></i> */}
-                                <Image src="/brands/x-logo-white.webp" width={20} height={25} className='mx-auto' alt="Follow us on X" />
-                            </a>
-                            <a target="_blank" rel="noopener" aria-label="Follow us on Instagram" className="mr-3 is-inline-block" href="https://instagram.com/kabocash">
-                                <i className="mx-auto social image is-fullwidth bx bxl-instagram"></i>
-                            </a>
-                            <a target="_blank" rel="noopener" aria-label="Subscribe to our channel on YouTube" className="mr-3 is-inline-block" href="https://www.youtube.com/@kabocash">
-                                <i className="mx-auto social image is-fullwidth bx bxl-youtube"></i>
-                            </a>
+                    </div>
+                </div>
+                <div className="columns is-multiline is-flex-direction-row-reverse">
+                    <div className="column is-3">
+                        <h4 className="is-size-6 mb-4">GET NEWS</h4>
+                        <div className={styles.newsInputWrapper}>
+                            <input className={styles.newsInput} placeholder="Enter email address" />
+                            <button className='button'>Submit</button>
                         </div>
                     </div>
-                    <div className="column is-5">
-                        <div className="columns is-multiline is-justify-content-end">
-                            <div className="column is-6 is-6-desktop mb-5">
-                                <h4 className="is-size-5 has-text-weight-bold mb-4">Pages</h4>
+                    <div className="column is-9">
+                        <div className={`columns is-multiline ${styles.footerNav}`}>
+                            <div className={`column is-4 is-4-desktop mb-5 ${styles.footerNavColumn}`}>
+                                <h4 className="is-size-6 mb-4">INFO</h4>
                                 <ul>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className="link" href="/">
-                                            Home
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/">
+                                            Contact Us
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" href="/about-kabocash-technologies" className="link">
-                                            About us
+                                        <a target="_self" rel="noopener" href="/about-kabocash-technologies" className={styles.footerLink}>
+                                            Customer Service
                                         </a>
                                     </li>
-                                    {/* <li className="mb-2">
-                                        <a target="_blank" rel="noopener" className="link" href="#">
-                                            FAQs
-                                        </a>
-                                    </li> */}
                                     <li className="mb-2">
-                                        <a target="_blank" rel="noopener" className="link" href="#">
-                                            Support
+                                        <a target="_blank" rel="noopener" className={styles.footerLink} href="#">
+                                            Press
+                                        </a>
+                                    </li>
+                                    <li className="mb-2">
+                                        <a target="_blank" rel="noopener" className={styles.footerLink} href="#">
+                                            Careers
                                         </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div className="column is-6 is-6-desktop mb-5">
-                                <h4 className="is-size-5 has-text-weight-bold mb-4">Quick Links</h4>
+                            <div className={`column is-4 is-4-desktop mb-5 ${styles.footerNavColumn}`}>
+                                <h4 className="is-size-6 mb-4">INFO</h4>
                                 <ul>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className="link" href="/customer-privacy">
-                                            Customer privacy
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/customer-privacy">
+                                            Privacy Policy
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className="link" href="/security-guidelines">
-                                            Security guidelines
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/security-guidelines">
+                                            Terms of Service
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className={`column is-4 is-4-desktop mb-5 ${styles.footerNavColumn}`}>
+                                <h4 className="is-size-6 mb-4">CONNECT</h4>
+                                <ul>
+                                    <li className="mb-2">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/customer-privacy">
+                                            Tiktok
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className="link" href="/terms-of-service">
-                                            Terms of service
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/security-guidelines">
+                                            Facebook
+                                        </a>
+                                    </li>
+                                    <li className="mb-2">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/terms-of-service">
+                                            Instagram
+                                        </a>
+                                    </li>
+                                    <li className="mb-2">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/terms-of-service">
+                                            LinkedIn
                                         </a>
                                     </li>
                                 </ul>
@@ -78,34 +93,7 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="is-flex mb-4" style={{ gap: "10px" }}>
-                    <div className="download-btn is-light">
-                        <div className="item">
-                            <i className='bx bxl-play-store bx-md'></i>
-                        </div>
-                        <div className="item inner">
-                            <span className="df">GET IT ON</span>
-                            <span className="dfn">Google Play</span>
-                        </div>
-                    </div>
-                    <a style={{ all: "unset" }} href="https://apps.apple.com/app/kabocash/id6469073288" target="_blank" rel="noreferrer">
-                        <div className="download-btn is-light">
-                            <div className="item">
-                                <i className="bx bxl-apple bx-md"></i>
-                            </div>
-                            <div className="item inner">
-                                <span className="df">GET IT ON</span>
-                                <span className="dfn">App Store</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <hr />
-                <div className='sec-text has-text-centered'>
-                    <p className='mb-2'>Registration: 80034161985297 - P.O. Box 119701 Central Kampala GPO. OS Kagere Advocates. Soliz House. 23 Lumumba Avenue, Nakasero. Kampala, Uganda.</p>
-                    <p className='mb-2'>Registration: 7044680 - KaboCash Technologies NIG. LTD NO342, KANO STATE, NIGERIA. TIN-(31455227-0001)</p>
-                    <p>All rights reserved &copy; KaboCash Technologies 2023</p>
-                </div>
+                <p className={styles.rights}>Copyright © 2023 HomeSparkle Solution All rights reserved.</p>
             </div>
         </footer>
     )

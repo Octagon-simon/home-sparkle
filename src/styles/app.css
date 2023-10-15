@@ -72,6 +72,19 @@ a.navbar-item.is-active {
     padding: 12px 16px;
 }
 
+.tabs.is-toggle li.is-active a {
+    background-color: var(--brand) !important;
+    border-color: var(--brand) !important;
+}
+
+.tabs.is-toggle a {
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-width: 0 1px 0 0 !important;
+    margin-bottom: 0;
+    position: relative;
+}
+
 a.navbar-burger {
     user-select: none !important;
 }
@@ -104,6 +117,8 @@ a.navbar-burger {
 /*Buttons*/
 button.button {
     font-weight: 500;
+    font-size: initial;
+    height: initial;
     padding: var(--padding-xs) var(--padding-base);
     border-radius: var(--br-13xl);
 }
@@ -139,6 +154,15 @@ button.button {
 
 .has-text-black-black5 {
     color: var(--black-black5) !important;
+}
+
+.custom-input {
+    background-color: transparent;
+    border: none;
+}
+
+.custom-input::placeholder {
+    color: #FDFDFD;
 }
 
 /*Elements*/
@@ -185,30 +209,6 @@ button.button {
 
 .field:not(:last-child) {
     margin-bottom: 2rem;
-}
-
-footer.footer {
-    background-color: var(--brand-dark);
-    padding: 1.5rem 1.5rem;
-    color: #fff;
-    font-size: 0.95rem !important;
-}
-
-footer.footer .link {
-    color: #fff;
-}
-
-footer.footer .link:hover {
-    color: var(--sec);
-}
-
-footer .sec-text {
-    color: #9e9e9e !important;
-}
-
-.footer hr {
-    background-color: #353535 !important;
-    height: 1px !important;
 }
 
 .qr-section {
@@ -487,7 +487,7 @@ a.about-card-footer-item:hover {
         line-height: normal !important;
     }
 
-    .projects-completed .projects-completed-item{
+    .projects-completed .projects-completed-item {
         max-width: 100px;
     }
 
@@ -532,6 +532,10 @@ a.about-card-footer-item:hover {
 
     .hide-on-desktop {
         display: none !important;
+    }
+
+    .has-text-right-desktop {
+        text-align: right !important;
     }
 }
 

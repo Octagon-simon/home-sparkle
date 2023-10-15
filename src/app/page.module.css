@@ -33,15 +33,6 @@
   border-right: 1px solid #8e8e8e;
 }
 
-.locationInput {
-  background-color: transparent;
-  border: none;
-}
-
-.locationInput::placeholder {
-  color: #FDFDFD;
-}
-
 .projectsCompleted .projectsCompletedItem {
   text-align: center;
 }
@@ -125,6 +116,27 @@
   background-color: var(--black1) !important;
 }
 
+.cleaningBrush img {
+  position: absolute;
+  top: 626.56px;
+  left: 919px;
+  width: 521px;
+  height: 868.25px;
+  object-fit: cover;
+}
+
+.testimonialContainer{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.testimonialItem{
+  align-self: center;
+  text-align: center;
+}
+
+
 /* Styles for Mobile Screens */
 @media screen and (max-width: 767px) {
 
@@ -153,6 +165,10 @@
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-13xl);
+  }
+  
+  .testimonialItem h4{
+    font-size: 1rem !important;
   }
 
 }
