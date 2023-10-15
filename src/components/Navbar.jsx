@@ -17,7 +17,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar is-align-items-center" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-align-items-center hide-on-mobile hide-on-tablet" role="navigation" aria-label="main navigation">
                 <a role="button" className="navbar-burger is-align-self-center" aria-label="menu" aria-expanded="false" data-target="NavContent" onClick={(event) => toggleMobileNav(event)}>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>

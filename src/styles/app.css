@@ -532,11 +532,13 @@ a.about-card-footer-item:hover {
 
     .navbar {
         padding: 0 10px !important;
-        display: flex;
-        justify-content: space-between;
+        /* display: flex;
+        justify-content: space-between; */
     }
 
-    .nav-book-btn{
+    /* .navbar:not(.navbar .navbar-burger.is-active){} */
+
+    .nav-book-btn {
         text-align: right;
     }
 
@@ -545,11 +547,11 @@ a.about-card-footer-item:hover {
         font-size: .8rem !important;
     }
 
-    .navbar .navbar-brand img{
+    .navbar .navbar-brand img {
         width: 80px;
     }
 
-    .navbar-burger{
+    .navbar-burger {
         margin-left: 0 !important;
     }
 
@@ -578,15 +580,20 @@ a.about-card-footer-item:hover {
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .title.home-title {
-        font-size: 2.5rem;
-    }
-
+/* Your tablet-specific styles here */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
     .section-content {
         padding: var(--padding-xs) 0 !important;
     }
+    .hide-on-tablet{
+        display: none !important;
+    }
+    .show-on-tablet{
+        display: block !important;
+    }
 }
+
+
 
 /* Styles for screens wider than 1920 pixels (very large screens) */
 @media screen and (min-width: 1921px) {

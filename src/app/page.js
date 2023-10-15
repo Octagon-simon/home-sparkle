@@ -130,8 +130,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={styles.cleaningBrush}>
-            <Image src="/cleaning-brush.png" width={300} height={300} />
+          <div className={styles.cleaningItemsWrapper}>
+          <div className={styles.cleaningItems}>
+            <div className={styles.cleaningItemsSingle}>
+              <Image src="/cleaning-brush.svg" width={300} height={300} />
+            </div>
+            <div className={styles.cleaningItemsSingle}>
+              <Image src="/cleaning-bucket.svg" width={300} height={300} />
+            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -191,26 +198,26 @@ export default function Home() {
           <div className='hide-on-desktop mt-5'>
             <Carousel showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
               <div className='carousel-item' style={{ marginRight: '-80px' }}>
-                <Image src="/testimonial-1.png" width={50} height={500} alt='' />
+                <Image src="/testimonial-1.svg" width={50} height={500} alt='' />
               </div>
               <div className='carousel-item'>
-                <Image src="/testimonial-2.png" width={500} height={500} alt='' />
+                <Image src="/testimonial-2.svg" width={500} height={500} alt='' />
               </div>
               <div className='carousel-item' style={{ marginLeft: '-80px' }}>
-                <Image src="/testimonial-3.png" width={500} height={50} alt='' />
+                <Image src="/testimonial-3.svg" width={500} height={50} alt='' />
               </div>
             </Carousel>
           </div>
           <div className='hide-on-mobile mt-5'>
             <div className='columns'>
               <div className='column is-4'>
-                <Image src="/testimonial-1.png" style={{ width: "360px", height: "360px" }} width={360} height={360} alt='' />
+                <Image src="/testimonial-1.svg" width={360} height={360} alt='' />
               </div>
               <div className='column is-4'>
-                <Image src="/testimonial-2.png" width={500} height={500} alt='' />
+                <Image src="/testimonial-2.svg" width={500} height={500} alt='' />
               </div>
               <div className='column is-4'>
-                <Image src="/testimonial-3.png" width={360} height={360} alt='' />
+                <Image src="/testimonial-3.svg" width={360} height={360} alt='' />
 
               </div>
             </div>

@@ -1,0 +1,97 @@
+.mobileNav {
+    width: 100%;
+    padding: 0 20px;
+    background-color: #fff;
+    z-index: 99999999;
+    top: 0;
+    position: fixed;
+}
+
+.mobileMenuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobileMenu .mobileMenuItem a {
+    text-decoration: none;
+    color: #000;
+}
+
+.mobileMenu .mobileMenuItemActive {
+    background-color: #EBF8FF;
+    border-radius: 32px;
+}
+
+.mobileMenu .mobileMenuItemActive a {
+    color: #33B5FF;
+}
+
+/* Hide the checkbox input */
+.hidden {
+    display: none;
+}
+/* Style the burger icon */
+
+.burger img {
+    width: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Style the mobile menu */
+.mobileMenu {
+    display: none;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    /* border: 1px solid #000; */
+    border-radius: 0 0 20px 20px;
+}
+
+/* Show the mobile menu when the checkbox is checked */
+.mobileMenuActive {
+    display: block;
+}
+
+/* Style menu items */
+.mobileMenu ul li {
+    padding: 10px 20px;
+}
+
+.mobileMenu ul li:not(:last-child){
+    margin-bottom: 20px;
+}
+
+/* Make the last item without a border */
+.mobileMenu ul li:last-child {
+    border-bottom: none;
+}
+
+/* Style the button, image, and login button */
+.mobileMenuParent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+.burger{
+    flex-basis: 10%;
+}
+.mobileMenuParent .mobileMenuBrand{
+    flex-basis: 60%;
+}
+
+.mobileMenuParent .mobileMenuBrand img {
+    width: 70px;
+}
+
+.mobileMenuParent button {
+    /* background-color: #33B5FF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer; */
+}

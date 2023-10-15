@@ -40,7 +40,7 @@
   color: #fff !important;
 }
 
-.locationInput:focus{
+.locationInput:focus {
   outline: 0;
 }
 
@@ -93,13 +93,13 @@
 
 
 /**CARD**/
-.serviceCardWrapper{
+.serviceCardWrapper {
   display: flex;
   justify-content: center;
   gap: var(--gap-13xl);
 }
 
-.serviceCard{
+.serviceCard {
   max-width: 350px;
   min-height: 350px;
   display: flex;
@@ -107,12 +107,12 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  padding:  var(--padding-21xl) var(--padding-xl);
+  padding: var(--padding-21xl) var(--padding-xl);
   border-radius: var(--br-13xl);
   color: #fff !important;
 }
 
-.serviceCardIcon{
+.serviceCardIcon {
   margin-bottom: 30px;
   width: 80px;
   height: 80px;
@@ -123,30 +123,53 @@
   align-content: center;
 }
 
-.serviceCard.hasBrandBg{
+.serviceCard.hasBrandBg {
   background-color: var(--brand) !important;
 }
 
-.serviceCard.hasBlackBg{
+.serviceCard.hasBlackBg {
   background-color: var(--black1) !important;
 }
 
-.cleaningBrush img {
+/* .cleaningBrush img {
   position: absolute;
   top: 626.56px;
   left: 919px;
   width: 521px;
   height: 868.25px;
   object-fit: cover;
+} */
+.cleaningItemsWrapper{
+  width: 100%;
+  height: 400px;
 }
 
-.testimonialContainer{
+.cleaningItems {
+  position: absolute;
+  right: -25px;
+  z-index: 99999999999999;
+  transform: translate(0%, -20%);
+}
+
+.cleaningItemsSingle{
+  text-align: right;
+}
+
+.cleaningItemsSingle:nth-child(1){
+  transform: translate(0%, -20%);
+}
+
+.cleaningItemsSingle:nth-child(2){
+  transform: translate(0%, -100%);
+}
+
+.testimonialContainer {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.testimonialItem{
+.testimonialItem {
   align-self: center;
   text-align: center;
 }
@@ -175,15 +198,27 @@
     max-width: 100px;
   }
 
-  .serviceCardWrapper{
+  .serviceCardWrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-13xl);
   }
-  
-  .testimonialItem h4{
+
+  .testimonialItem h4 {
     font-size: 1rem !important;
+  }
+
+  .page_cleaningItemsSingle__hRswf:nth-child(2) {
+    transform: translate(0%, -120%);
+}
+
+  .cleaningItemsSingle:nth-child(1) img{
+    width: 250px;
+  }
+
+  .cleaningItemsSingle:nth-child(2) img{
+    width: 200px;
   }
 
 }

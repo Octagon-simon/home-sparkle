@@ -9,9 +9,9 @@ export default function TestimonialCarousel() {
 
     const numTestimonials = 3; // Number of testimonials
     const testimonialImages = [
-        '/testimonial-1.png',
-        '/testimonial-2.png',
-        '/testimonial-3.png',
+        '/testimonial-1.svg',
+        '/testimonial-2.svg',
+        '/testimonial-3.svg',
         // Add more image paths as needed
     ];
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile Navigation</title>
+</head>
+
+<body>
+    <nav>
+        <div class="mobile-menu-parent">
+            <label class="burger">
+                <img src="./harmburger.svg" />
+            </label>
+            <div class="obile-menu-brand">
+            <img src="./nav.jpg" width="80px" />
+            </div>
+            <div>
+                <button class="button is-dark">Book now</button>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li class="mobile-menu-item is-active"><a href="#">Home</a></li>
+                <li class="mobile-menu-item"><a href="#">About</a></li>
+                <li class="mobile-menu-item"><a href="#">Services</a></li>
+                <li class="mobile-menu-item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+</body>
+
+</html>
+
+<style>
+   /* Reset default list styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu .mobile-menu-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.mobile-menu .mobile-menu-item.is-active {
+    background-color: #EBF8FF;
+    border-radius: 32px;
+}
+
+.mobile-menu .mobile-menu-item.is-active a {
+    color: #33B5FF;
+    font-weight: 600;
+}
+
+/* Hide the checkbox input */
+.hidden {
+    display: none;
+}
+
+/* Style the burger icon */
+.burger img{
+    width: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Style the mobile menu */
+.mobile-menu {
+    display: none;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Show the mobile menu when the checkbox is checked */
+#menu-toggle:checked + .mobile-menu-parent .mobile-menu {
+    display: block;
+}
+
+/* Style menu items */
+.mobile-menu ul li {
+    padding: 20px;
+}
+
+/* Make the last item without a border */
+.mobile-menu ul li:last-child {
+    border-bottom: none;
+}
+
+/* Style the button, image, and login button */
+.mobile-menu-parent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: #fff;
+}
+
+.mobile-menu-parent .mobile-menu-brand img {
+    width: 80px;
+}
+
+.mobile-menu-parent button {
+    background-color: #33B5FF;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+</style>
