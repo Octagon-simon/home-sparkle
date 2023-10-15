@@ -25,7 +25,7 @@ export default function Navbar() {
                 </a>
                 <div className="navbar-brand">
                     <a className="navbar-item" href="/">
-                        <Image src={"/nav.jpg"} alt={"Home sparkles"} width={"80"} height={"30"} />
+                        <Image src={"/brand-logo.svg"} alt={"Home sparkles"} width={"80"} height={"30"} />
                     </a>
                 </div>
                 <div id="NavContent" className="navbar-menu is-align-self-center">

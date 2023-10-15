@@ -7,7 +7,7 @@ export default function Footer() {
             <div className="container">
                 <div className="columns is-flex-direction-row-reverse">
                     <div className="column is-5 has-text-right-desktop">
-                        <Image className={styles.brandImage} src="/logo-dark.png" width={150} height={150} alt='' />
+                        <Image className={styles.brandImage} src="/brand-logo-white.svg" width={150} height={150} alt='' />
                     </div>
                     <div className="column is-7 iss-flex is-align-self-center is-justify-content-center">
                         <p className={styles.aboutText}>

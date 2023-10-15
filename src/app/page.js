@@ -123,7 +123,7 @@ export default function Home() {
               </div>
             </div>
             <div className='column is-6'>
-              <Image src="/why-choose-us.png" width={500} height={500} />
+              <Image src="/why-choose-us.svg" width={500} height={500} />
             </div>
           </div>
         </div>
