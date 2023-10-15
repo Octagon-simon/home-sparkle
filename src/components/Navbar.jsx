@@ -17,20 +17,19 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar is-align-items-center" role="navigation" aria-label="main navigation">
+                <a role="button" className="navbar-burger is-align-self-center" aria-label="menu" aria-expanded="false" data-target="NavContent" onClick={(event) => toggleMobileNav(event)}>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
                 <div className="navbar-brand">
                     <a className="navbar-item" href="/">
                         <Image src={"/nav.jpg"} alt={"Home sparkles"} width={"100"} height={"30"} />
                     </a>
-
-                    <a role="button" className="navbar-burger is-align-self-center" aria-label="menu" aria-expanded="false" data-target="NavContent" onClick={(event) => toggleMobileNav(event)}>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
                 </div>
                 <div id="NavContent" className="navbar-menu is-align-self-center">
-                    <div className="navbar-end">
+                    <div className="navbar-start m-auto">
                         <a className={`navbar-item is-active`} href="/"
                             onClick={unToggleMobileNav}>
                             Home
@@ -46,6 +45,9 @@ export default function Navbar() {
                             contact
                         </a>
                     </div>
+                </div>
+                <div className="nav-book-btn">
+                    <button className="button is-black">Book now</button>
                 </div>
             </nav>
         </>

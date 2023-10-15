@@ -34,7 +34,12 @@
 .newsInput {
     background-color: transparent;
     border: none;
+    color: #fff !important;
 }
+
+.newsInput:focus{
+    outline: 0;
+  }
 
 .newsInput::placeholder {
     color: var(--black2);

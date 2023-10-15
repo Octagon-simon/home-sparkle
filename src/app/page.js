@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '@/styles/root.css'
 import styles from './page.module.css'
+import TestimonialCarousel from '@/components/Testimonial';
 
 export default function Home() {
   return (
@@ -21,7 +22,7 @@ export default function Home() {
                     <span className='icon'>
                       <Image width={15} height={15} alt='' src="/search-icon.svg" />
                     </span>
-                    <input type="text" className={'custom-input'} id="location-input" placeholder="Enter your location" />
+                    <input type="text" className={styles.locationInput} id="location-input" placeholder="Enter your location" />
                   </div>
                   <div className={styles.frameItem}>
                     <span className='icon'>
@@ -134,72 +135,87 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='section'>
+      <section className=''>
         <div className='container'>
-          <div className='section-content'>
-            <h4 className='title is-4 has-text-centered'>HOW CLEANING HAPPENS?</h4>
+          <div className='section-content p-4'>
+            <h4 className='title is-5 has-text-centered'>HOW CLEANING HAPPENS?</h4>
             <div class="tabs is-toggle is-toggle-rounded">
               <ul className=' is-justify-content-center'>
                 <li class="is-active">
                   <a>
-                    <span class="icon is-small"><i class="fas fa-image"></i></span>
                     <span>Living Room</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <span class="icon is-small"><i class="fas fa-music"></i></span>
                     <span>Bedroom</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <span class="icon is-small"><i class="fas fa-film"></i></span>
                     <span>Kitchen</span>
                   </a>
                 </li>
                 <li>
                   <a>
-                    <span class="icon is-small"><i class="fas fa-file-alt"></i></span>
                     <span>Restroom</span>
                   </a>
                 </li>
               </ul>
             </div>
-            <div className='mt-4'>
-              <Image style={{ width: '100%' }} className='' src="/how-cleaning-happens.png" width={500} height={500} />
-            </div>
+
+          </div>
+          <div>
+            <Image style={{ height: '100%', width: '100%' }} className='hide-on-mobile' src="/how-cleaning-happens.svg" width={500} height={500} />
           </div>
         </div>
       </section>
+      <div className='mt-4'>
+        <Image style={{ height: '100%' }} className='hide-on-desktop' src="/how-cleaning-happens-mobile.png" width={500} height={500} />
+      </div>
       <section className='section'>
         <div className='container'>
           <div className='section-content'>
             <div className={styles.testimonialContainer}>
               <div className={styles.testimonialItem}>
-                <Image src="/chevron-back-outline.svg" width={20} height={20} />
+                <Image src="/chevron-back-outline.svg" width={25} height={25} />
               </div>
               <div className={styles.testimonialItem}>
                 <h4 className='title is-4'>What our clients say about us</h4>
               </div>
               <div className={styles.testimonialItem}>
-                <Image src="/chevron-forward-outline.svg" width={20} height={20} />
+                <Image src="/chevron-forward-outline.svg" width={25} height={25} />
               </div>
             </div>
           </div>
           <div className='hide-on-desktop mt-5'>
             <Carousel showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
-              <div className='carousel-item'>
-                <Image src="/testimonial-1.png" style={{ width: "360px", height: "360px" }} width={360} height={360} alt='' />
+              <div className='carousel-item' style={{ marginRight: '-80px' }}>
+                <Image src="/testimonial-1.png" width={50} height={500} alt='' />
               </div>
               <div className='carousel-item'>
                 <Image src="/testimonial-2.png" width={500} height={500} alt='' />
               </div>
-              <div className='carousel-item'>
-                <Image src="/testimonial-3.png" width={360} height={360} alt='' />
+              <div className='carousel-item' style={{ marginLeft: '-80px' }}>
+                <Image src="/testimonial-3.png" width={500} height={50} alt='' />
               </div>
             </Carousel>
           </div>
+          <div className='hide-on-mobile mt-5'>
+            <div className='columns'>
+              <div className='column is-4'>
+                <Image src="/testimonial-1.png" style={{ width: "360px", height: "360px" }} width={360} height={360} alt='' />
+              </div>
+              <div className='column is-4'>
+                <Image src="/testimonial-2.png" width={500} height={500} alt='' />
+              </div>
+              <div className='column is-4'>
+                <Image src="/testimonial-3.png" width={360} height={360} alt='' />
+
+              </div>
+            </div>
+          </div>
+          {/* <TestimonialCarousel /> */}
         </div>
       </section>
     </main >

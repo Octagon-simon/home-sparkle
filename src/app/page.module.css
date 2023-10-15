@@ -33,6 +33,21 @@
   border-right: 1px solid #8e8e8e;
 }
 
+
+.locationInput {
+  background-color: transparent;
+  border: none;
+  color: #fff !important;
+}
+
+.locationInput:focus{
+  outline: 0;
+}
+
+.locationInput::placeholder {
+  color: #FDFDFD;
+}
+
 .projectsCompleted .projectsCompletedItem {
   text-align: center;
 }

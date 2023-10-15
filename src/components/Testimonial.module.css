@@ -1,0 +1,27 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.testimonial {
+    flex: 0 0 auto;
+    width: 100%; /* Each testimonial takes up the entire width of the container */
+    transition: transform 0.3s;
+}
+
+.active {
+    transform: translateX(0); /* The active testimonial is centered */
+}
+
+/* Position the testimonial container within the carousel */
+.testimonialsContainer {
+    display: flex;
+    transform: translateX(-100%); /* Initial position to the left */
+    transition: transform 0.3s;
+}
+
+/* Add transitions for smoother animation */
+.testimonialsContainer.active {
+    transform: translateX(0); /* Centered */
+}
