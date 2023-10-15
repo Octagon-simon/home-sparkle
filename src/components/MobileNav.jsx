@@ -28,7 +28,7 @@ export default function MobileNav() {
                     <img src="./nav.jpg" width="80px" />
                 </div>
                 <div>
-                    <button className="button is-black">Book now</button>
+                    <button className="button is-black hover-brand">Book now</button>
                 </div>
             </div>
             <div className={`${styles.mobileMenu} ${(isOpen) ? `${styles.mobileMenuActive}` : null}`}>

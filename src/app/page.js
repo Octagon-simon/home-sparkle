@@ -5,7 +5,45 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '@/styles/root.css'
 import styles from './page.module.css'
-import TestimonialCarousel from '@/components/Testimonial';
+import { useState } from 'react';
+
+const HowCleaningHappens = () => {
+
+  const [index, setIndex] = useState(0);
+
+  const whereCleaningHappens = ['Living Room', 'Bedroom', 'Kitchen', 'Restroom'];
+
+  const imageName = `/how-cleaning-happens-${whereCleaningHappens[index].toLowerCase().replace(' ', '-')}.svg`
+
+  return (
+    <>
+      <div className='container'>
+        <div className='section-content p-4'>
+          <h4 className='title is-5 has-text-centered'>HOW CLEANING HAPPENS?</h4>
+          <div className="tabs is-toggle is-toggle-rounded">
+            <ul className='is-justify-content-center'>
+              {
+                whereCleaningHappens.map((val, ind) => {
+                  return <li className={(index === ind) ? 'is-active' : null} onClick={() => setIndex(ind)} key={ind}>
+                    <a>
+                      <span>{val}</span>
+                    </a>
+                  </li>
+                })
+              }
+            </ul>
+          </div>
+        </div>
+        <div className='mt-4'>
+          <Image style={{ height: '100%', width: '100%' }} className='hide-on-mobile' src={imageName} width={500} height={500} />
+        </div>
+      </div>
+      <div className='mt-4'>
+        <Image style={{ height: '100%' }} className='hide-on-desktop' src={imageName} width={500} height={500} />
+      </div>
+    </>
+  )
+}
 
 export default function Home() {
   return (
@@ -30,9 +68,9 @@ export default function Home() {
                     </span>
                     <div className={styles.dropdownSelect}>
                       <select className={styles.dropdown}>
-                        <option value="male">Type of service</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
+                        <option value="">Type of service</option>
+                        <option value="">Service1</option>
+                        <option value="">Service2</option>
                       </select>
                       <div className={styles.arrowDown}>
                         <img src="/arrow-down.svg" alt="Arrow Icon" />
@@ -97,89 +135,56 @@ export default function Home() {
             <h3 className='title is-3 fw-bold'>What services do we offer?</h3>
           </div>
 
-          <div className={`mt-4 ${styles.serviceCardWrapper}`}>
-            <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
-              <div className={styles.serviceCardIcon}>
-                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+          <div className={styles.serviceCardContainer}>
+            <div className={` ${styles.serviceCardWrapper}`}>
+              <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
+                <div className={styles.serviceCardIcon}>
+                  <Image src="/cleaning-item-1.svg" width={20} height={20} />
+                </div>
+                <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
+                <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
               </div>
-              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
-              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+              <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
+                <div className={styles.serviceCardIcon}>
+                  <Image src="/cleaning-item-3.svg" width={20} height={20} />
+                </div>
+                <h5 className='title is-5 has-text-white'>Office Cleaning</h5>
+                <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
+              </div>
             </div>
-            <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
-              <div className={styles.serviceCardIcon}>
-                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+            <div className={` ${styles.serviceCardWrapper}`}>
+              <div className={`card ${styles.serviceCard} ${styles.hasBrandBg}`}>
+                <div className={styles.serviceCardIcon}>
+                  <Image src="/cleaning-item-2.svg" width={20} height={20} />
+                </div>
+                <h5 className='title is-5 has-text-white'>Domestic Cleaning</h5>
+                <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
               </div>
-              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
-              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
-            </div>
-          </div>
-          <div className={`mt-4 ${styles.serviceCardWrapper}`}>
-            <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
-              <div className={styles.serviceCardIcon}>
-                <Image src="/cleaning-item-1.svg" width={20} height={20} />
+              <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
+                <div className={styles.serviceCardIcon}>
+                  <Image src="/cleaning-item-4.svg" width={20} height={20} />
+                </div>
+                <h5 className='title is-5 has-text-white'>End of Lease Cleaning</h5>
+                <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
               </div>
-              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
-              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
-            </div>
-            <div className={`card ${styles.serviceCard} ${styles.hasBlackBg}`}>
-              <div className={styles.serviceCardIcon}>
-                <Image src="/cleaning-item-1.svg" width={20} height={20} />
-              </div>
-              <h5 className='title is-5 has-text-white'>Commercial Cleaning</h5>
-              <p>Lörem ipsum trassa plogga möling. Monoprebelt fasatt men skimma. Mäskap tritise i onade utom biogisk, att rit-avdrag. Eposade farir, anteng även om neresön holl. att rit-avdrag. Eposade farir, anteng även om neresön holl.</p>
             </div>
           </div>
 
           <div className={styles.cleaningItemsWrapper}>
-          <div className={styles.cleaningItems}>
-            <div className={styles.cleaningItemsSingle}>
-              <Image src="/cleaning-brush.svg" width={300} height={300} />
+            <div className={styles.cleaningItems}>
+              <div className={styles.cleaningItemsSingle}>
+                <Image src="/cleaning-brush.svg" width={300} height={300} />
+              </div>
+              <div className={styles.cleaningItemsSingle}>
+                <Image src="/cleaning-bucket.svg" width={300} height={300} />
+              </div>
             </div>
-            <div className={styles.cleaningItemsSingle}>
-              <Image src="/cleaning-bucket.svg" width={300} height={300} />
-            </div>
-          </div>
           </div>
         </div>
       </section>
-      <section className=''>
-        <div className='container'>
-          <div className='section-content p-4'>
-            <h4 className='title is-5 has-text-centered'>HOW CLEANING HAPPENS?</h4>
-            <div class="tabs is-toggle is-toggle-rounded">
-              <ul className=' is-justify-content-center'>
-                <li class="is-active">
-                  <a>
-                    <span>Living Room</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>Bedroom</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>Kitchen</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <span>Restroom</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-          <div>
-            <Image style={{ height: '100%', width: '100%' }} className='hide-on-mobile' src="/how-cleaning-happens.svg" width={500} height={500} />
-          </div>
-        </div>
+      <section>
+        <HowCleaningHappens />
       </section>
-      <div className='mt-4'>
-        <Image style={{ height: '100%' }} className='hide-on-desktop' src="/how-cleaning-happens-mobile.png" width={500} height={500} />
-      </div>
       <section className='section'>
         <div className='container'>
           <div className='section-content'>

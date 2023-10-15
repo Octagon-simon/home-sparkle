@@ -80,6 +80,13 @@
   color: #fff;
 }
 
+/* Style the dropdown options */
+.dropdown option {
+  background-color: #000; /* Background color for options */
+  color: #fff; /* Text color for options */
+}
+
+
 /* Styles for the arrow icon */
 .arrowDown {
   margin-left: 10px;
@@ -93,10 +100,25 @@
 
 
 /**CARD**/
-.serviceCardWrapper {
+.serviceCardContainer{
   display: flex;
   justify-content: center;
+  gap: 50px;
+}
+
+.serviceCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: var(--gap-13xl);
+}
+
+.serviceCardWrapper:nth-child(1){
+  transform: translate(0%, 10%);
+}
+
+.serviceCardWrapper:nth-child(2){
+  transform: translate(0%, -10%);
 }
 
 .serviceCard {
@@ -147,8 +169,7 @@
 .cleaningItems {
   position: absolute;
   right: -25px;
-  z-index: 99999999999999;
-  transform: translate(0%, -20%);
+  transform: translate(0%, -30%);
 }
 
 .cleaningItemsSingle{
@@ -209,6 +230,12 @@
     font-size: 1rem !important;
   }
 
+  .cleaningItems {
+    position: absolute;
+    right: -25px;
+    transform: translate(0%, -15%);
+  }
+
   .page_cleaningItemsSingle__hRswf:nth-child(2) {
     transform: translate(0%, -120%);
 }
@@ -219,6 +246,14 @@
 
   .cleaningItemsSingle:nth-child(2) img{
     width: 200px;
+  }
+
+  .serviceCardContainer{
+    flex-direction: column;
+  }
+
+  .serviceCardWrapper{
+    transform: none !important;
   }
 
 }
