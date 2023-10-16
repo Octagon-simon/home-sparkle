@@ -143,7 +143,7 @@
 
 .teamWrapper {
     display: flex;
-    gap: 20px;
+    /* gap: 20px; */
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px 0;
@@ -208,9 +208,13 @@
         width: 100% !important;
     }
 
-    .teamWrapper {
-        gap: 0 !important;
+    .teamWrapper .teamItem:nth-child(1), .teamWrapper .teamItem:nth-child(2){
+        margin-bottom: 50px;
     }
+
+    /* .teamWrapper {
+        gap: 0 !important;
+    } */
 
     .teamItem {
         /* Set each child to take up 50% width with spacing */

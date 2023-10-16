@@ -60,12 +60,12 @@ export default function Navbar() {
                                 </a>
                             })
                         }
-                        <div className="navbar-item hide-on-desktop">
+                        <div className="navbar-item hide-on-desktop show-on-tablet">
                             <button className="button is-black hover-brand">Book now</button>
                         </div>
                     </div>
                 </div>
-                <div className="navbar-item hide-on-mobile">
+                <div className="navbar-item hide-on-mobile hide-on-tablet">
                     <button className="button is-black hover-brand">Book now</button>
                 </div>
             </nav>
