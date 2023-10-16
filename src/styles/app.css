@@ -6,6 +6,7 @@ body {
     scroll-behavior: smooth;
     font-family: 'Satoshi', sans-serif !important;
     overflow-x: hidden;
+    background-color: var(--white1) !important;
 }
 
 body {
@@ -123,6 +124,10 @@ button.button {
     border-radius: var(--br-13xl);
 }
 
+.button.is-black{
+    box-shadow: 0px 8px 24px -4px #18274b30;
+}
+
 .button.btn-brand {
     background-color: var(--brand);
     border: 1px solid var(--brand);
@@ -136,7 +141,7 @@ button.button {
     font-family: inherit !important;
 }
 
-.button.hover-brand:hover{
+.button.hover-brand:hover {
     background-color: var(--brand) !important;
     color: #fff;
     border-color: var(--brand) !important;
@@ -529,8 +534,10 @@ a.about-card-footer-item:hover {
 
     .navbar {
         padding: 0 10px !important;
-        /* display: flex;
-        justify-content: space-between; */
+    }
+
+    .navbar:has(.navbar-burger.is-active) {
+        border-radius: 0 0 20px 20px;
     }
 
     /* .navbar:not(.navbar .navbar-burger.is-active){} */
@@ -544,13 +551,31 @@ a.about-card-footer-item:hover {
         font-size: .8rem !important;
     }
 
+    a.navbar-brand-link {
+        flex: 1;
+        display: inline-flex;
+    }
+
     .navbar .navbar-brand img {
         width: 80px;
     }
 
+    .navbar-item {
+        text-align: center;
+    }
+
+    .navbar-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .navbar-item>.button {
+        width: 100%;
+    }
+
+    /* 
     .navbar-burger {
         margin-left: 0 !important;
-    }
+    } */
 
     /* .tabs.is-toggle.is-toggle-rounded li:first-child a {
         padding-left: 0.8em !important;
@@ -582,11 +607,35 @@ a.about-card-footer-item:hover {
     .section-content {
         padding: var(--padding-xs) 0 !important;
     }
-    .hide-on-tablet{
+
+    .hide-on-tablet {
         display: none !important;
     }
-    .show-on-tablet{
+
+    .show-on-tablet {
         display: block !important;
+    }
+
+    a.navbar-brand-link {
+        flex: 1;
+        display: inline-flex;
+        justify-content: start;
+    }
+
+    .navbar .navbar-brand img {
+        width: 80px;
+    }
+
+    .navbar-item {
+        text-align: center;
+    }
+
+    .navbar-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .navbar-item>.button {
+        width: 100%;
     }
 }
 

@@ -18,12 +18,15 @@
     /* Colors */
     --white1: #fdfdfd;
     --white2: #e6e6e6;
+    --white3: #F7F7F7;
+    --white4: #FAFDFF;
+
 
     --black-black5: #7a7a7a;
-    --black-black1: #131313;
     
     --black1: #060607;
     --black2: #7a7a7a;
+    --black3: #131313;
     
     --color-gray-100: rgba(253, 253, 253, 0.32);
     --color-darkslategray-100: #494c4f;

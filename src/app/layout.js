@@ -9,7 +9,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='has-navbar-fixed-top'>
-        <MobileNav />
+        {/* <MobileNav /> */}
         <Navbar />
         {children}
         <Footer />

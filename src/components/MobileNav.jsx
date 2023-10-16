@@ -25,7 +25,7 @@ export default function MobileNav() {
                     }
                 </label>
                 <div className={styles.mobileMenuBrand}>
-                    <img src="./nav.jpg" width="80px" />
+                    <img src="/brand-logo.svg" width="80px" />
                 </div>
                 <div>
                     <button className="button is-black hover-brand">Book now</button>
