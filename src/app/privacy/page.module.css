@@ -1,0 +1,43 @@
+.main {
+    background-color: var(--white1);
+    color: var(--black2);
+}
+
+.privacySection {
+    padding: 3rem 5rem;
+}
+
+.privacyHero {
+    background-image: url('/privacy-hero.svg');
+    background-repeat: no-repeat;
+    min-height: 260px;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: luminosity;
+}
+
+.privacyContent {
+    font-weight: 400;
+    color: var(--black3);
+    line-height: 25px;
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+
+    .privacyHero {
+        background-image: url('/privacy-hero-mobile.svg');
+        min-height: unset;
+    }
+
+    .privacyHeroTitle {
+        font-weight: 700 !important;
+        font-size: 2.3rem !important;
+    }
+
+    .privacySection {
+        padding: 2.5rem 1rem;
+    }
+
+
+}
