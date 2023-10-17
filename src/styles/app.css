@@ -117,7 +117,7 @@ a.navbar-burger {
 }
 
 /*Buttons*/
-button.button {
+button.button, a.button {
     font-weight: 500;
     font-size: initial;
     height: initial;
