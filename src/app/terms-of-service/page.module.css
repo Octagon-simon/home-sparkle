@@ -9,6 +9,7 @@
 
 .termsHero {
     background-image: url('/terms-hero.svg');
+    background-position: 100% 0;
     background-repeat: no-repeat;
     min-height: 260px;
     display: flex;
@@ -25,10 +26,9 @@
 /* Styles for Mobile Screens */
 @media screen and (max-width: 767px) {
 
-    .termsHero {
+    /* .termsHero {
         background-image: url('/terms-hero-mobile.svg');
-        min-height: unset;
-    }
+    } */
 
     .termsHeroTitle {
         font-weight: 700 !important;
