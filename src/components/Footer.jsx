@@ -29,7 +29,7 @@ export default function Footer() {
                                 <h4 className="is-size-6 mb-4">INFO</h4>
                                 <ul>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/contact">
                                             Contact Us
                                         </a>
                                     </li>
@@ -54,12 +54,12 @@ export default function Footer() {
                                 <h4 className="is-size-6 mb-4">INFO</h4>
                                 <ul>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/customer-privacy">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/privacy">
                                             Privacy Policy
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/security-guidelines">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/terms-of-service">
                                             Terms of Service
                                         </a>
                                     </li>
@@ -69,22 +69,22 @@ export default function Footer() {
                                 <h4 className="is-size-6 mb-4">CONNECT</h4>
                                 <ul>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/customer-privacy">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="">
                                             Tiktok
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/security-guidelines">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="">
                                             Facebook
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/terms-of-service">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="">
                                             Instagram
                                         </a>
                                     </li>
                                     <li className="mb-2">
-                                        <a target="_self" rel="noopener" className={styles.footerLink} href="/terms-of-service">
+                                        <a target="_self" rel="noopener" className={styles.footerLink} href="e">
                                             LinkedIn
                                         </a>
                                     </li>
