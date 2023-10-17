@@ -1,0 +1,50 @@
+.main {
+    background-color: var(--white1);
+    color: var(--black2);
+    max-width: 1200px;
+}
+
+.contactText {
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.input {
+    border: 1px solid var(--black2) !important;
+    background-color: transparent !important;
+}
+
+textarea.input {
+    height: 128px;
+}
+
+.columnWithImage {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.columnWithImage img {
+    width: 100%;
+}
+
+.formWrapper {
+    padding: 40px 12px;
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+    .contactText {
+        font-weight: 700;
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .columnWithImage {
+        display: none !important;
+    }
+
+    .formWrapper {
+        padding: var(--padding-45xl) var(--padding-base);
+    }
+}

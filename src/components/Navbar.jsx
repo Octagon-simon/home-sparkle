@@ -61,12 +61,12 @@ export default function Navbar() {
                             })
                         }
                         <div className="navbar-item hide-on-desktop show-on-tablet">
-                            <button className="button is-black hover-brand">Book now</button>
+                            <a href="/book-now" target="_self" className="button is-black hover-brand">Book now</a>
                         </div>
                     </div>
                 </div>
                 <div className="navbar-item hide-on-mobile hide-on-tablet">
-                    <button className="button is-black hover-brand">Book now</button>
+                    <a href="/book-now" target="_self" className="button is-black hover-brand">Book now</a>
                 </div>
             </nav>
         </>
