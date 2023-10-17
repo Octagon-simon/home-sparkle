@@ -50,11 +50,15 @@
     --gap-11xs: 2px;
     --gap-4xs: 9px;
 
+
+    
     /* Paddings */
     --padding-45xl: 64px;
+    --padding-base: 16px;
+
+
     --padding-81xl: 100px;
     --padding-xs: 12px;
-    --padding-base: 16px;
     --padding-5xs: 8px;
     --padding-50xl: 69px;
     --padding-21xl: 40px;

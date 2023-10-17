@@ -12,7 +12,9 @@ body {
 body {
     font-size: 1em !important;
     color: #131313 !important;
-    /* font-weight: 500 !important; */
+}
+body.has-navbar-fixed-top, html.has-navbar-fixed-top {
+    padding-top: 5rem !important;
 }
 
 img {
@@ -23,7 +25,6 @@ img {
 img.notFullWidth {
     width: initial !important;
 }
-
 
 .navbar {
     padding: 0 3rem;
@@ -132,6 +133,10 @@ button.button {
     background-color: var(--brand);
     border: 1px solid var(--brand);
     color: #fff !important;
+}
+
+.button.button.btn-brand.is-active, .button.button.btn-brand:active{
+    border-color: var(--brand) !important;
 }
 
 .button.btn-brand.is-outline {

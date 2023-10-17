@@ -1,219 +1,50 @@
 .main {
     background-color: var(--white1);
     color: var(--black2);
+    max-width: 1200px;
 }
 
-.aboutTopContainer{
-    padding: 3rem 3rem 0 !important;
-}
-
-.aboutTopText{
-    font-size: 1.8rem !important;
-    line-height: 45px;
+.contactText {
     font-weight: 700;
+    margin-bottom: 10px !important;
 }
 
-.heroBg {
-    background-image: url('/about-hero.svg');
+.input {
+    border: 1px solid var(--black2) !important;
+    background-color: transparent !important;
 }
 
-.fw400 {
-    font-weight: 400;
+textarea.input {
+    height: 128px;
 }
 
-.fw500 {
-    font-weight: 500;
-}
-
-.mx500 {
-    max-width: 500px;
-}
-
-.mx700 {
-    max-width: 700px;
-}
-
-.missionLargeText {
-    line-height: 45px;
-}
-
-.missionWrapper {
-    display: flex;
-    justify-content: end;
-    padding: 20px;
-}
-
-.mission {
-    max-width: 450px;
-    border-radius: 20px;
-    padding: 25px;
-    box-shadow: 0px 8px 24px -4px #18274b29;
-    transform: translate(-6%, -50%);
-    /* z-index: 9999999; */
-    position: relative;
-    background-color: #fff;
-}
-
-.missionIcon {
-    display: inline-flex;
-    align-content: center;
-    gap: 5px;
-}
-
-.missionIcon span {
-    font-weight: bold;
-    color: var(--black3);
-}
-
-.missionText p {
-    color: var(--black2);
-    font-size: .84rem;
-}
-
-.projectsCompleted {
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
-}
-
-.projectsCompleted .projectsCompletedItem {
-    text-align: center;
-    padding: 20px;
-    font-weight: 500;
-    width: 300px;
-}
-
-.projectsCompleted .projectsCompletedItem:first-child {
-    background-color: var(--black1);
-    color: #fff;
-}
-
-.projectsCompleted .projectsCompletedItem:not(:first-child) {
-    background-color: var(--white3);
-}
-
-/**STYLES FOR FIRST CHILD OF PROJECTS COMPLETED**/
-.projectsCompleted .projectsCompletedItem:first-child p:nth-child(1) {
-    color: var(--white1);
-}
-
-.projectsCompleted .projectsCompletedItem:first-child p:nth-child(2) {
-    color: var(--white2) !important;
-}
-
-/** Add Font weight to paragraph elements that are not the first child**/
-.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(1) {
-    color: var(--black3);
-    font-weight: 700;
-}
-
-.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(2) {
-    color: var(--black2);
-}
-
-.projectsCompleted .projectsCompletedItem p:nth-child(1) {
-    margin-bottom: 5px;
-    font-size: 1.2rem;
-}
-
-.projectsCompleted .projectsCompletedItem p:nth-child(2) {
-    font-size: 1rem;
-}
-
-.offBg {
-    background-color: var(--white4) !important;
-}
-
-.sparkleContainer {
-    background-color: #fff;
-    padding: 25px;
-    box-shadow: 0px 8px 24px -4px #18274b14;
-}
-
-.sparkleHeading {
-    font-weight: 500;
-    color: var(--black3);
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.sparkleContent {
-    font-weight: 400;
-}
-
-.teamWrapper {
-    display: flex;
-    /* gap: 20px; */
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 20px 0;
-}
-
-.teamItem {
-    display: flex;
+.columnWithImage {
+    display: flex !important;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    max-width: 250px;
+    justify-content: end;
 }
 
-.teamImage img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+.columnWithImage img {
+    width: 100%;
 }
 
-.teamMeta p:first-child {
-    font-weight: 500;
-    color: var(--black3);
-    margin-bottom: 5px;
-}
-
-.teamMeta p:last-child {
-    font-weight: 400;
-    font-size: 0.8rem;
-    color: var(--black2);
+.formWrapper {
+    padding: 40px 12px;
 }
 
 /* Styles for Mobile Screens */
 @media screen and (max-width: 767px) {
-
-    .aboutTopContainer{
-        padding: 3rem 1.5rem !important;
+    .contactText {
+        font-weight: 700;
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
     }
 
-    .aboutTopText,
-    .missionLargeText {
-        font-size: 1.3rem !important;
+    .columnWithImage {
+        display: none !important;
     }
 
-    .heroBg {
-        background-image: url('/about-hero-mobile.svg');
-        min-height: 300px !important;
-    }
-
-    .mission {
-        transform: translate(0%, -50%) !important;
-    }
-
-    .missionLargeText {
-        line-height: 35px !important;
-    }
-
-    .projectsCompleted {
-        flex-direction: column !important;
-    }
-
-    .projectsCompleted .projectsCompletedItem {
-        width: 100% !important;
-    }
-
-    .teamWrapper .teamItem:nth-child(1), .teamWrapper .teamItem:nth-child(2){
-        margin-bottom: 50px;
-    }
-
-    .teamItem {
-        /* Set each child to take up 50% width with spacing */
-        width: calc(50% - 10px) !important;
+    .formWrapper {
+        padding: var(--padding-45xl) var(--padding-base);
     }
 }
