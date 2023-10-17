@@ -1,0 +1,156 @@
+.main {
+    background-color: var(--white1);
+    color: var(--black2);
+}
+
+.serviceText {
+    font-weight: 500;
+    margin-bottom: 10px !important;
+}
+
+.sectionWithPadding {
+    padding: 5rem 3rem 3rem 3rem !important;
+}
+
+.fw400 {
+    font-weight: 400;
+}
+
+.fw500 {
+    font-weight: 500;
+}
+
+.mx500 {
+    max-width: 500px;
+}
+
+.mx700 {
+    max-width: 700px;
+}
+
+.servicesHeroWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.servicesHeroItem {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.servicesHeroItem .servicesHeroItemTextBox {
+    flex: 1;
+}
+
+.servicesHeroItem .servicesHeroItemTextBox p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--black4);
+}
+
+.servicesHeroItem .servicesHeroItemImageBox {
+    display: flex;
+    flex: 1;
+}
+
+.servicesHeroItem .servicesHeroItemImageBox img {
+    width: 300px;
+    height: 250px;
+}
+
+.missionLargeText {
+    line-height: 45px;
+}
+
+.projectsCompleted {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.projectsCompleted .projectsCompletedItem {
+    text-align: center;
+    padding: 20px;
+    font-weight: 500;
+    width: 300px;
+}
+
+.projectsCompleted .projectsCompletedItem:first-child {
+    background-color: var(--black1);
+    color: #fff;
+}
+
+.projectsCompleted .projectsCompletedItem:not(:first-child) {
+    background-color: var(--white3);
+}
+
+/**STYLES FOR FIRST CHILD OF PROJECTS COMPLETED**/
+.projectsCompleted .projectsCompletedItem:first-child p:nth-child(1) {
+    color: var(--white1);
+}
+
+.projectsCompleted .projectsCompletedItem:first-child p:nth-child(2) {
+    color: var(--white2) !important;
+}
+
+/** Add Font weight to paragraph elements that are not the first child**/
+.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(1) {
+    color: var(--black3);
+    font-weight: 700;
+}
+
+.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(2) {
+    color: var(--black2);
+}
+
+.projectsCompleted .projectsCompletedItem p:nth-child(1) {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.projectsCompleted .projectsCompletedItem p:nth-child(2) {
+    font-size: 1rem;
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+
+    .serviceText {
+        font-weight: 700;
+        font-size: 1.5rem !important;
+        margin-bottom: 10px !important;
+    }
+
+    .projectsCompleted {
+        flex-direction: column !important;
+    }
+
+    .projectsCompleted .projectsCompletedItem {
+        width: 100% !important;
+    }
+
+    .missionLargeText {
+        font-size: 1.3rem !important;
+        line-height: 35px !important;
+    }
+
+    .servicesHeroItem {
+        width: 100% !important;
+    }
+
+    .servicesHeroItem:nth-child(2), .servicesHeroItem:nth-child(3){
+        flex-direction: row-reverse
+    }
+
+    .servicesHeroItem .servicesHeroItemImageBox img {
+        width: 100%;
+        height: 100%;
+    }
+}

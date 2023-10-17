@@ -212,10 +212,6 @@
         margin-bottom: 50px;
     }
 
-    /* .teamWrapper {
-        gap: 0 !important;
-    } */
-
     .teamItem {
         /* Set each child to take up 50% width with spacing */
         width: calc(50% - 10px) !important;
