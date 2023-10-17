@@ -501,7 +501,7 @@ a.about-card-footer-item:hover {
 /* Styles for Mobile Screens */
 @media screen and (max-width: 767px) {
     .hero .title.home-title {
-        font-size: 20px !important;
+        font-size: 25px !important;
         line-height: normal !important;
     }
 

@@ -82,40 +82,34 @@
     width: 300px;
 }
 
-.projectsCompleted .projectsCompletedItem:first-child {
+.projectsCompleted .projectsCompletedItem:hover {
     background-color: var(--black1);
-    color: #fff;
 }
 
-.projectsCompleted .projectsCompletedItem:not(:first-child) {
+.projectsCompleted .projectsCompletedItem:hover p:nth-child(1){
+    color: var(--white1);
+    font-weight: 500;
+}
+
+.projectsCompleted .projectsCompletedItem:hover p:nth-child(2){
+    color: var(--white2);
+    font-weight: 500;
+}
+
+.projectsCompleted .projectsCompletedItem {
     background-color: var(--white3);
 }
 
-/**STYLES FOR FIRST CHILD OF PROJECTS COMPLETED**/
-.projectsCompleted .projectsCompletedItem:first-child p:nth-child(1) {
-    color: var(--white1);
-}
-
-.projectsCompleted .projectsCompletedItem:first-child p:nth-child(2) {
-    color: var(--white2) !important;
-}
-
 /** Add Font weight to paragraph elements that are not the first child**/
-.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(1) {
+.projectsCompleted .projectsCompletedItem p:nth-child(1) {
     color: var(--black3);
     font-weight: 700;
-}
-
-.projectsCompleted .projectsCompletedItem:not(:first-child) p:nth-child(2) {
-    color: var(--black2);
-}
-
-.projectsCompleted .projectsCompletedItem p:nth-child(1) {
     margin-bottom: 5px;
     font-size: 1.2rem;
 }
 
 .projectsCompleted .projectsCompletedItem p:nth-child(2) {
+    color: var(--black2);
     font-size: 1rem;
 }
 
