@@ -1,0 +1,41 @@
+.main {
+    background-color: var(--white1);
+    color: var(--black2);
+}
+
+.termsSection {
+    padding: 3rem 5rem;
+}
+
+.termsHero {
+    background-image: url('/terms-hero.svg');
+    background-repeat: no-repeat;
+    min-height: 260px;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: luminosity;
+}
+
+.termsContent {
+    font-weight: 400;
+    color: var(--black3);
+    line-height: 25px;
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+
+    .termsHero {
+        background-image: url('/terms-hero-mobile.svg');
+        min-height: unset;
+    }
+
+    .termsHeroTitle {
+        font-weight: 700 !important;
+        font-size: 2.3rem !important;
+    }
+
+    .termsSection {
+        padding: 2.5rem 1rem;
+    }
+}
