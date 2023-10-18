@@ -188,6 +188,10 @@
   text-align: center;
 }
 
+.testimonialItem .testimonialController{
+  background-color: transparent;
+  border: unset;
+}
 
 /* Styles for Mobile Screens */
 @media screen and (max-width: 767px) {

@@ -46,6 +46,20 @@ const HowCleaningHappens = () => {
 }
 
 export default function Home() {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleSelect = (index) => {
+    setCurrentSlide(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentSlide(currentSlide - 1);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide(currentSlide + 1);
+  };
   return (
     <main>
       <section className="hero is-medium">
@@ -190,18 +204,23 @@ export default function Home() {
           <div className='section-content'>
             <div className={styles.testimonialContainer}>
               <div className={styles.testimonialItem}>
-                <Image src="/chevron-back-outline.svg" width={25} height={25} />
+                <button className={styles.testimonialController} onClick={goToPrevious} disabled={currentSlide === 0} >
+                  <Image src="/chevron-back-outline.svg" width={25} height={25} />
+                </button>
               </div>
               <div className={styles.testimonialItem}>
                 <h4 className='title is-4'>What our clients say about us</h4>
               </div>
               <div className={styles.testimonialItem}>
-                <Image src="/chevron-forward-outline.svg" width={25} height={25} />
+                <button className={styles.testimonialController} onClick={goToNext} disabled={currentSlide === 2}>
+                  <Image src="/chevron-forward-outline.svg" width={25} height={25} />
+                </button>
               </div>
             </div>
           </div>
           <div className='hide-on-desktop mt-5'>
-            <Carousel showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
+            <Carousel selectedItem={currentSlide}
+              onChange={handleSelect} showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={false} interval={5000}>
               <div className='carousel-item' style={{ marginRight: '-80px' }}>
                 <Image src="/testimonial-1.svg" width={50} height={500} alt='' />
               </div>

@@ -94,6 +94,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <p className={styles.rights}>Copyright © 2023 HomeSparkle Solution All rights reserved.</p>
+                <p style={{marginTop : '10px'}}>Made with ❤️ by <a style={{color : '#c9c9c9'}} href="https://www.linkedin.com/in/simon-ugorji-57a6a41a3/" target='_blank' rel='noreferrer'>Simon Ugorji ✨</a></p>
             </div>
         </footer>
     )
