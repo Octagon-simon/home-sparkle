@@ -1,7 +1,7 @@
 .main {
     background-color: var(--white1);
     color: var(--black2);
-    max-width: 1200px;
+    max-width: 100%;
 }
 
 .contactText {

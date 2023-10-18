@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import BookModal from "./BookModal";
 
 export default function Navbar() {
 
@@ -32,6 +33,10 @@ export default function Navbar() {
         }
     }, [])
 
+    //Modal
+
+    const [isModalActive, setIsModalActive] = useState(false)
+
     return (
         <>
             {/* hide-on-mobile hide-on-tablet */}
@@ -61,14 +66,15 @@ export default function Navbar() {
                             })
                         }
                         <div className="navbar-item hide-on-desktop show-on-tablet">
-                            <a href="/book-now" target="_self" className="button is-black hover-brand">Book now</a>
+                            <button onClick={() => setIsModalActive(true)} className="button is-black hover-brand">Book now</button>
                         </div>
                     </div>
                 </div>
                 <div className="navbar-item hide-on-mobile hide-on-tablet">
-                    <a href="/book-now" target="_self" className="button is-black hover-brand">Book now</a>
+                    <button onClick={() => setIsModalActive(true)} className="button is-black hover-brand">Book now</button>
                 </div>
             </nav>
+            <BookModal isActive={isModalActive} setIsActive={setIsModalActive} />
         </>
     )
 }

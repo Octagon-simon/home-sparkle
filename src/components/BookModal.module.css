@@ -1,0 +1,126 @@
+.main {
+    background-color: var(--white1);
+    color: var(--black2);
+    max-width: 1200px;
+}
+
+.bookModalTitle {
+    font-weight: 700;
+    margin-bottom: 10px !important;
+}
+
+.bookModalContent {
+    font-weight: 400;
+    color: var(--black2);
+    font-size: .9rem;
+}
+
+.modalDeleteWrapper {
+    text-align: right;
+    transform: translate(0px, 5px);
+    width: 720px;
+    position: absolute;
+    top: 0;
+    z-index: 99999999999;
+}
+
+.modalDeleteWrapper button{
+    max-height: 20px;
+    max-width: 40px;
+    min-height: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+.modalCardBody {
+    border-radius: 25px;
+    scrollbar-width: thin;
+    /* Set the scrollbar width to 'thin' */
+    scrollbar-color: transparent transparent;
+    /* Set the thumb and track color to transparent */
+}
+
+/* For Webkit (Chrome, Safari) */
+.modalCardBody::-webkit-scrollbar {
+    width: 0.2em;
+    /* Set the width of the scrollbar to make it very thin */
+}
+
+.modalCardBody::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* Set the thumb color to transparent */
+}
+
+.small {
+    font-weight: 500;
+    color: var(--black2);
+}
+
+.formDivider {
+    margin: 30px 0;
+    border-bottom: 1px solid var(--white2);
+}
+
+.input,
+.select {
+    border: 1px solid var(--black2) !important;
+    background-color: transparent !important;
+    border-radius: 10px !important;
+}
+
+.formWrapper {
+    padding: 12px 40px;
+}
+
+.availabilityWrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.availabilityItem {
+    flex: 1;
+}
+
+.modalDeleteWrapperMobileItem:has(button){
+    display: none;
+}
+
+.modalDeleteWrapperMobileItem{
+    flex: 1;
+}
+
+.modalDeleteWrapperMobileItem:nth-child(1){
+    flex-basis: 70%;
+}
+
+.modalDeleteWrapperMobileItem:nth-child(2){
+    text-align: right;
+}
+
+/* Styles for Mobile Screens */
+@media screen and (max-width: 767px) {
+    .formWrapper {
+        padding: 5px;
+    }
+
+    .modalDeleteWrapperMobile{
+        display: flex;
+        align-items: center;
+    }
+
+    .modalDeleteWrapperMobileItem:has(button){
+        display: block;
+    }
+
+    .modalDeleteWrapper {
+        display: none;
+    }
+
+    .modalDeleteWrapperMobileItem button {
+        max-height: 20px;
+        max-width: 30px;
+        min-height: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
