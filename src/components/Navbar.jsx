@@ -53,7 +53,7 @@ export default function Navbar() {
                     </a>
                 </div>
                 <div id="NavContent" className="navbar-menu is-align-self-center">
-                    <div className="navbar-start m-auto">
+                    <div className="navbar-start m-auto" style={{gap : '20px'}}>
                         {
                             Object.keys(navItems).map((val, ind) => {
 

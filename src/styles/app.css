@@ -65,6 +65,11 @@ a.navbar-item.is-active {
     font-weight: 700;
 }
 
+a.navbar-item:hover {
+    background-color: transparent !important;
+    color: var(--brand) !important;
+}
+
 .tabs.is-toggle li.is-active a {
     background-color: var(--brand) !important;
     border-color: var(--brand) !important;
@@ -146,6 +151,12 @@ button.button, a.button {
     font-family: inherit !important;
 }
 
+/* .button.btn-brand.is-outline:hover{
+    background-color: var(--brand) !important;
+    border: 1px solid var(--brand) !important;
+    color: #fff !important;
+} */
+
 .button.hover-brand:hover {
     background-color: var(--brand) !important;
     color: #fff;
@@ -182,7 +193,6 @@ button.button, a.button {
 
 }
 
-
 /*Elements*/
 
 .ico-purple {
@@ -202,22 +212,6 @@ button.button, a.button {
     --fa-secondary-color: #f9406c;
 }
 
-.list-flex {
-    font-size: 1.3rem;
-}
-
-.list-flex {
-    display: inline-flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.list {
-    padding-left: 20px;
-    list-style: disc;
-    margin-bottom: 20px;
-}
-
 .input,
 .textarea {
     border: 1px solid var(--brand-dark) !important;
@@ -227,87 +221,6 @@ button.button, a.button {
 
 .field:not(:last-child) {
     margin-bottom: 2rem;
-}
-
-.qr-section {
-    margin-top: 40px;
-}
-
-.qr-box {
-    text-align: center;
-    background: #FFFFFF;
-    box-shadow: 5px 5px 20px 0px #e6e6e6;
-    width: 100%;
-    max-width: 120px;
-    margin: 0 0 0 auto;
-    border-radius: 5px;
-}
-
-.qr-box>img {
-    border-radius: inherit !important;
-}
-
-.qr-section .download-btn-group {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.download-btn {
-    border-radius: 5px;
-    border: 1px solid #000;
-    display: flex;
-    gap: 5px;
-    max-width: 160px;
-    padding: 5px;
-    cursor: pointer !important;
-    user-select: none !important;
-}
-
-.download-btn:not(.download-btn.is-light):hover {
-    background-color: #232323;
-    color: #fff;
-    border: 1px solid #232323;
-}
-
-.download-btn.is-light {
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-.download-btn.is-light:hover {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #fff;
-}
-
-.download-btn>.item {
-    display: inline-flex;
-}
-
-.download-btn>.item:has(i) {
-    align-self: center;
-    flex-basis: 20%;
-}
-
-.download-btn>.item.inner {
-    flex-basis: 80%;
-    align-self: center;
-}
-
-.download-btn>.inner {
-    display: flex;
-    flex-direction: column;
-}
-
-.df {
-    font-size: 12px !important;
-    font-weight: 300;
-}
-
-.dfn {
-    font-size: 18px !important;
-    font-weight: 500;
 }
 
 /*Utilities*/

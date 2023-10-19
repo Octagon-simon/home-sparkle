@@ -1,7 +1,29 @@
 import styles from './BookModal.module.css'
 import Image from 'next/image'
 
-export default function BookModal({isActive, setIsActive}) {
+export default function BookModal({ isActive, setIsActive }) {
+
+
+    const handleSubmit = (e) => {
+        //prevent default action (reload)
+        e.preventDefault();
+
+        if (typeof window !== "undefined") {
+            
+            if (typeof octaValidate !== "function") return false;
+
+            //check if octavalidate is defined
+            if (typeof octaValidate === "function") {
+                const ov = new octaValidate('form_book');
+                //validate
+                if(ov.validate()){
+                    alert('ses')
+                }
+            }
+        } else {
+            return false
+        }
+    }
 
     return (
         <>
@@ -24,25 +46,23 @@ export default function BookModal({isActive, setIsActive}) {
                                     <button onClick={() => setIsActive(false)} className="delete" aria-label="close"></button>
                                 </div>
                             </div>
-                            <form method='post' onSubmit={(e) => {
-                                e.preventDefault()
-                            }}>
+                            <form id="form_book" method='post' onSubmit={handleSubmit}>
                                 <div className='field'>
                                     <label className='label'>Full Name</label>
-                                    <input className={`input ${styles.input}`} />
+                                    <input octavalidate="R,NAME" id="inp_fullname" className={`input ${styles.input}`} />
                                 </div>
                                 <div className='field'>
                                     <label className='label'>Phone Number</label>
-                                    <input className={`input ${styles.input}`} />
+                                    <input octavalidate="R,DIGITS" id="inp_phone" className={`input ${styles.input}`} />
                                 </div>
                                 <div className='field'>
                                     <label className='label'>Location</label>
-                                    <input className={`input ${styles.input}`} />
+                                    <input octavalidate="R,TEXT" id="inp_location" className={`input ${styles.input}`} />
                                 </div>
                                 <div className='field'>
                                     <label className='label'>Select service</label>
                                     <div className={`select is-fullwidth`}>
-                                        <select className={styles.select}>
+                                        <select octavalidate="R,TEXT" id="inp_service" className={styles.select}>
                                             <option>Select dropdown</option>
                                             <option>With options</option>
                                         </select>
@@ -60,7 +80,7 @@ export default function BookModal({isActive, setIsActive}) {
                                             <div className="field">
                                                 <label>Date</label>
                                                 <div className="control has-icons-left">
-                                                    <input className={`input ${styles.input}`} type="text" />
+                                                    <input octavalidate="R" id="inp_date" className={`input ${styles.input}`} type="date" />
                                                     <span className="icon is-small is-left">
                                                         <Image src="./calendar.svg" width={20} height={20} />
                                                     </span>
@@ -71,7 +91,7 @@ export default function BookModal({isActive, setIsActive}) {
                                             <div className="field">
                                                 <label>Time</label>
                                                 <div className="control has-icons-left">
-                                                    <input className={`input ${styles.input}`} type="text" />
+                                                    <input octavalidate="R" id="inp_time" className={`input ${styles.input}`} type="time" />
                                                     <span className="icon is-small is-left">
                                                         <Image src="./clock.svg" width={20} height={20} />
                                                     </span>
@@ -81,7 +101,7 @@ export default function BookModal({isActive, setIsActive}) {
                                     </div>
                                 </div>
                                 <div className='field mt-5 has-text-centered'>
-                                    <button className='button is-black'>Book Now</button>
+                                    <button form="form_book" className='button is-black'>Book Now</button>
                                 </div>
                             </form>
                         </div>
