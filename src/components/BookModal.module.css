@@ -24,7 +24,7 @@
     z-index: 99999999999;
 }
 
-.modalDeleteWrapper button{
+.modalDeleteWrapper button {
     max-height: 20px;
     max-width: 40px;
     min-height: 40px;
@@ -68,6 +68,16 @@
     border-radius: 10px !important;
 }
 
+/* Hide the default calendar icon */
+/* .input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+} */
+
+/* Hide the placeholder text */
+/* .input[type="date"]::placeholder {
+    visibility: hidden;
+} */
+
 .formWrapper {
     padding: 12px 40px;
 }
@@ -81,19 +91,19 @@
     flex: 1;
 }
 
-.modalDeleteWrapperMobileItem:has(button){
+.modalDeleteWrapperMobileItem:has(button) {
     display: none;
 }
 
-.modalDeleteWrapperMobileItem{
+.modalDeleteWrapperMobileItem {
     flex: 1;
 }
 
-.modalDeleteWrapperMobileItem:nth-child(1){
+.modalDeleteWrapperMobileItem:nth-child(1) {
     flex-basis: 70%;
 }
 
-.modalDeleteWrapperMobileItem:nth-child(2){
+.modalDeleteWrapperMobileItem:nth-child(2) {
     text-align: right;
 }
 
@@ -103,12 +113,12 @@
         padding: 5px;
     }
 
-    .modalDeleteWrapperMobile{
+    .modalDeleteWrapperMobile {
         display: flex;
         align-items: center;
     }
 
-    .modalDeleteWrapperMobileItem:has(button){
+    .modalDeleteWrapperMobileItem:has(button) {
         display: block;
     }
 

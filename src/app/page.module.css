@@ -189,8 +189,7 @@
 }
 
 .testimonialItem .testimonialController{
-  background-color: transparent;
-  border: unset;
+  display: none;
 }
 
 /* Styles for Mobile Screens */
@@ -251,6 +250,12 @@
 
   .serviceCardWrapper {
     transform: none !important;
+  }
+
+  .testimonialItem .testimonialController{
+    background-color: transparent;
+    border: unset;
+    display: block;
   }
 
 }

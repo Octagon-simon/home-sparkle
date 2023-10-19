@@ -128,12 +128,12 @@ export default function Home() {
                 </div>
               </div>
               <div className='section-content'>
-                <button className='button btn-brand is-outline'>
+                <a href='/about' className='button btn-brand is-outline'>
                   Read more about us
                   <span className='icon'>
                     <Image src="/arrow-right.svg" width={20} height={20} />
                   </span>
-                </button>
+                </a>
               </div>
             </div>
             <div className='column is-6'>
