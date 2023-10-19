@@ -1,3 +1,8 @@
+# HOME SPARKLE
+
+![Home Sparkle By Simon Ugorji](https://github.com/Octagon-simon/home-sparkle/assets/68190998/4e814924-7a9c-484b-96d7-6d6634d9dd5d)
+
+
 ## Getting Started
 
 Please clone this repo and run the command below to install the required packages on your local machine.
