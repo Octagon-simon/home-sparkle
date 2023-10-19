@@ -70,6 +70,14 @@
   display: flex;
   align-items: center;
   position: relative;
+  width: 100%;
+}
+
+
+/* Style the dropdown list */
+.dropdownSelect::-ms-expand {
+  /* Hide the default arrow in IE */
+  display: none;
 }
 
 .dropdown {
@@ -80,6 +88,10 @@
   background-color: transparent;
   border: none;
   color: #fff;
+  /* Add a custom dropdown arrow */
+  background-image: url('/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
 }
 
 /* Style the dropdown options */
@@ -87,18 +99,6 @@
   background-color: #000;
   color: #fff;
 }
-
-/* Styles for the arrow icon */
-.arrowDown {
-  margin-left: 10px;
-}
-
-/* Style for the SVG arrow icon */
-.arrowDown img {
-  width: 15px;
-  height: auto;
-}
-
 
 /**CARD**/
 .serviceCardContainer {
@@ -188,7 +188,7 @@
   text-align: center;
 }
 
-.testimonialItem .testimonialController{
+.testimonialItem .testimonialController {
   display: none;
 }
 
@@ -252,7 +252,7 @@
     transform: none !important;
   }
 
-  .testimonialItem .testimonialController{
+  .testimonialItem .testimonialController {
     background-color: transparent;
     border: unset;
     display: block;

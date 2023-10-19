@@ -86,9 +86,6 @@ export default function Home() {
                         <option value="">Service1</option>
                         <option value="">Service2</option>
                       </select>
-                      <div className={styles.arrowDown}>
-                        <img src="/arrow-down.svg" alt="Arrow Icon" />
-                      </div>
                     </div>
                   </div>
                   <div className={styles.frameItem}>
