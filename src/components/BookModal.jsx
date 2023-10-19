@@ -1,23 +1,54 @@
+import { useState } from 'react'
 import styles from './BookModal.module.css'
 import Image from 'next/image'
 
+const ModalSuccess = ({ showSuccess, setShowSuccess }) => {
+
+    return (
+        <>
+            <div class={`modal ${(showSuccess) ? 'is-active' : ''}`}>
+                <div class="modal-background"></div>
+                <div class={`modal-content ${styles.successModalContent}`}>
+                    {/* <p class="image is-4by3">
+                        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                    </p> */}
+                    <div className='section-content has-text-centered'>
+                        <Image className='mb-3' src={"./check.png"} width={100} alt={''} height={100} />
+                        <h4 className='title is-3'>Thank You!</h4>
+                        <button className='button is-black' style={{ borderRadius: '10px' }} onClick={() => setShowSuccess(false)}>Okay</button>
+                    </div>
+                </div>
+                <button onClick={() => setShowSuccess(false)} class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </>
+    )
+}
+
 export default function BookModal({ isActive, setIsActive }) {
 
+    const [showSuccess, setShowSuccess] = useState(false);
 
     const handleSubmit = (e) => {
         //prevent default action (reload)
         e.preventDefault();
 
         if (typeof window !== "undefined") {
-            
+
             if (typeof octaValidate !== "function") return false;
 
             //check if octavalidate is defined
             if (typeof octaValidate === "function") {
-                const ov = new octaValidate('form_book');
+                const ov = new octaValidate('form_book', {
+                    errorElem : {
+                        'inp_service' : 'inp_service_wrapper'
+                    }
+                });
                 //validate
-                if(ov.validate()){
-                    alert('ses')
+                if (ov.validate()) {
+                    //Hide the book modal
+                    setIsActive(false);
+                    //show the success modal
+                    setShowSuccess(true)
                 }
             }
         } else {
@@ -59,15 +90,19 @@ export default function BookModal({ isActive, setIsActive }) {
                                     <label className='label'>Location</label>
                                     <input octavalidate="R,TEXT" id="inp_location" className={`input ${styles.input}`} />
                                 </div>
-                                <div className='field'>
-                                    <label className='label'>Select service</label>
-                                    <div className={`select is-fullwidth`}>
-                                        <select octavalidate="R,TEXT" id="inp_service" className={styles.select}>
-                                            <option>Select dropdown</option>
-                                            <option>With options</option>
-                                        </select>
+                                <div id="inp_service_wrapper">
+                                    <div className='field'>
+                                        <label className='label'>Select service</label>
+                                        <div className={`select is-fullwidth`}>
+                                            <select octavalidate="R,TEXT" id="inp_service" className={styles.select}>
+                                                <option selected value={""}></option>
+                                                <option>Service 1</option>
+                                                <option>Service 2</option>
+                                                <option>Service 3</option>
+                                            </select>
+                                        </div>
+                                        <small className={styles.small}>You can select more than one service</small>
                                     </div>
-                                    <small className={styles.small}>You can select more than one service</small>
                                 </div>
                                 <div className={styles.formDivider}></div>
                                 <div className='field'>
@@ -108,6 +143,7 @@ export default function BookModal({ isActive, setIsActive }) {
                     </section>
                 </div>
             </div>
+            <ModalSuccess showSuccess={showSuccess} setShowSuccess={setShowSuccess} />
         </>
     )
 }
