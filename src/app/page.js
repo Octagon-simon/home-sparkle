@@ -217,8 +217,10 @@ export default function Home() {
           </div>
           <div className='hide-on-desktop mt-5'>
             <Carousel selectedItem={currentSlide}
-              onChange={handleSelect} showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={false} interval={5000}>
-                {/* style={{ marginRight: '-80px' }} */}
+              onChange={handleSelect} showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={false} autoPlay={false} interval={0} 
+              swipeable={false} 
+              stopOnHover={false}>
+              {/* style={{ marginRight: '-80px' }} */}
               <div className='carousel-item' >
                 <Image src="/testimonial-1.svg" width={500} height={500} alt='' />
               </div>
