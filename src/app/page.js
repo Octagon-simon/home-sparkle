@@ -81,10 +81,10 @@ export default function Home() {
                       <Image width={15} height={15} alt='' src="/book.svg" />
                     </span>
                     <div className={styles.dropdownSelect}>
-                      <select className={styles.dropdown}>
+                      <select defaultValue={""} className={styles.dropdown}>
                         <option value="">Type of service</option>
-                        <option value="">Service1</option>
-                        <option value="">Service2</option>
+                        <option>Service 1</option>
+                        <option>Service 2</option>
                       </select>
                     </div>
                   </div>
@@ -218,14 +218,16 @@ export default function Home() {
           <div className='hide-on-desktop mt-5'>
             <Carousel selectedItem={currentSlide}
               onChange={handleSelect} showArrows={false} showIndicators={false} showThumbs={false} infiniteLoop={true} autoPlay={false} interval={5000}>
-              <div className='carousel-item' style={{ marginRight: '-80px' }}>
-                <Image src="/testimonial-1.svg" width={50} height={500} alt='' />
+                {/* style={{ marginRight: '-80px' }} */}
+              <div className='carousel-item' >
+                <Image src="/testimonial-1.svg" width={500} height={500} alt='' />
               </div>
               <div className='carousel-item'>
                 <Image src="/testimonial-2.svg" width={500} height={500} alt='' />
               </div>
-              <div className='carousel-item' style={{ marginLeft: '-80px' }}>
-                <Image src="/testimonial-3.svg" width={500} height={50} alt='' />
+              {/* style={{ marginLeft: '-80px' }} */}
+              <div className='carousel-item' >
+                <Image src="/testimonial-3.svg" width={500} height={500} alt='' />
               </div>
             </Carousel>
           </div>

@@ -80,22 +80,22 @@ export default function BookModal({ isActive, setIsActive }) {
                             <form id="form_book" method='post' onSubmit={handleSubmit}>
                                 <div className='field'>
                                     <label className='label'>Full Name</label>
-                                    <input octavalidate="R,NAME" id="inp_fullname" className={`input ${styles.input}`} />
+                                    <input placeholder='Required' octavalidate="R,NAME" id="inp_fullname" className={`input ${styles.input}`} />
                                 </div>
                                 <div className='field'>
                                     <label className='label'>Phone Number</label>
-                                    <input octavalidate="R,DIGITS" id="inp_phone" className={`input ${styles.input}`} />
+                                    <input placeholder='Required' octavalidate="R,DIGITS" id="inp_phone" className={`input ${styles.input}`} />
                                 </div>
                                 <div className='field'>
                                     <label className='label'>Location</label>
-                                    <input octavalidate="R,TEXT" id="inp_location" className={`input ${styles.input}`} />
+                                    <input placeholder='Required' octavalidate="R,TEXT" id="inp_location" className={`input ${styles.input}`} />
                                 </div>
                                 <div id="inp_service_wrapper">
                                     <div className='field'>
                                         <label className='label'>Select service</label>
                                         <div className={`select is-fullwidth`}>
-                                            <select octavalidate="R,TEXT" id="inp_service" className={styles.select}>
-                                                <option selected value={""}></option>
+                                            <select defaultValue={""} octavalidate="R,TEXT" id="inp_service" className={styles.select}>
+                                                <option value={""}>Select a service</option>
                                                 <option>Service 1</option>
                                                 <option>Service 2</option>
                                                 <option>Service 3</option>
@@ -115,7 +115,7 @@ export default function BookModal({ isActive, setIsActive }) {
                                             <div className="field">
                                                 <label>Date</label>
                                                 <div className="control has-icons-left">
-                                                    <input octavalidate="R" id="inp_date" className={`input ${styles.input}`} type="date" />
+                                                    <input placeholder='Required' octavalidate="R" id="inp_date" className={`input ${styles.input}`} type="date" />
                                                     <span className="icon is-small is-left">
                                                         <Image src="./calendar.svg" width={20} height={20} />
                                                     </span>
@@ -126,7 +126,7 @@ export default function BookModal({ isActive, setIsActive }) {
                                             <div className="field">
                                                 <label>Time</label>
                                                 <div className="control has-icons-left">
-                                                    <input octavalidate="R" id="inp_time" className={`input ${styles.input}`} type="time" />
+                                                    <input placeholder='Required' octavalidate="R" id="inp_time" className={`input ${styles.input}`} type="time" />
                                                     <span className="icon is-small is-left">
                                                         <Image src="./clock.svg" width={20} height={20} />
                                                     </span>
