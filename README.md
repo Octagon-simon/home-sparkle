@@ -2,7 +2,6 @@
 
 ![Home Sparkle By Simon Ugorji](https://github.com/Octagon-simon/home-sparkle/assets/68190998/4e814924-7a9c-484b-96d7-6d6634d9dd5d)
 
-
 ## Getting Started
 
 Please clone this repo and run the command below to install the required packages on your local machine.
@@ -25,7 +24,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This project uses [`bulma`](https://bulma.io) as the CSS framework.
 
 ## FIGMA DESIGN
 
@@ -35,7 +34,7 @@ Check out the figma design of this site here.
 
 ## LIVE PREVIEW
 
-Click on the link below to view a Live Demo of this static site on [render](https://render.com)
+Click on the link below to view a Live Demo of this static site on render
 
 https://home-sparkle.onrender.com/
 
