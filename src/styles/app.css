@@ -156,12 +156,6 @@ button.button, a.button {
     font-family: inherit !important;
 }
 
-/* .button.btn-brand.is-outline:hover{
-    background-color: var(--brand) !important;
-    border: 1px solid var(--brand) !important;
-    color: #fff !important;
-} */
-
 .button.hover-brand:hover {
     background-color: var(--brand) !important;
     color: #fff;
@@ -198,28 +192,8 @@ button.button, a.button {
 
 }
 
-/*Elements*/
-
-.ico-purple {
-    --fa-primary-color: #593ffb;
-    --fa-secondary-color: #593ffb;
-}
-
-.ico-green {
-    --fa-primary-color: #80cc28;
-    --fa-primary-opacity: 0.4;
-    --fa-secondary-color: #80cc28;
-    --fa-secondary-opacity: 1;
-}
-
-.ico-red {
-    --fa-primary-color: #f9406c;
-    --fa-secondary-color: #f9406c;
-}
-
 .input,
 .textarea {
-    border: 1px solid var(--brand-dark) !important;
     background-color: #fff8f8 !important;
     box-shadow: unset !important;
 }
@@ -229,124 +203,19 @@ button.button, a.button {
 }
 
 /*Utilities*/
-.d-none {
-    display: none !important;
-}
-
-.d-block {
-    display: block !important;
-}
-
-.shadow {
-    box-shadow: 0px 0px 8px #ddd;
-}
-
-.p-0 {
-    padding: 0 !important;
-}
 
 .fw-bold {
     font-weight: bold !important;
-}
-
-.fw-bolder {
-    font-weight: 900 !important;
 }
 
 .section-content {
     padding: var(--padding-xl) 0;
 }
 
-.bg-primary {
-    background-color: var(--brand) !important;
-    color: #fff !important;
-}
-
-.bg-primary-lighter {
-    background-color: var(--brand-lighter) !important;
-}
-
-.bg-primary-light {
-    background-color: var(--brand-light) !important;
-}
-
-.bg-primary-dark {
-    background-color: var(--brand-dark) !important;
-}
-
-.bg-sec {
-    background-color: var(--sec) !important;
-    color: #fff !important;
-}
-
-.fs-one-half {
-    font-size: 1.5rem;
-}
-
-.fw-light {
-    font-weight: var(--fw-light) !important;
-}
-
-.fw-heavy {
-    font-weight: var(--fw-heavy) !important;
-}
-
-.space-1x {
-    letter-spacing: 1px;
-}
-
-.space-2x {
-    letter-spacing: 2px;
-}
-
-.mx-350 {
-    max-width: 350px !important;
-}
-
-.radius-20 {
-    border-radius: 20px;
-}
-
-.has-border {
-    border: 1px solid !important;
-}
-
-.column.has-mobile-img>img {
-    height: 500px;
-}
-
-.has-hero-bg {
-    background-image: var(--hero-bg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-
 .mx-700 {
     max-width: 700px !important;
     margin: auto;
 }
-
-.hero.not-home {
-    min-height: 20vh !important;
-    justify-content: center;
-    background-color: #3F51B5;
-    background-image: unset;
-}
-
-.hero .title.home-title {
-    color: #fff !important;
-    /* font-size: 64px; */
-    line-height: 80px;
-    font-weight: 700;
-}
-
-.hero.not-home .hero-body {
-    align-items: center;
-    display: flex;
-}
-
 
 footer a:has(i.social) {
     color: inherit !important;
@@ -361,27 +230,6 @@ footer a:has(i.social) {
 .content {
     font-size: 1.2rem;
 }
-
-.text-tertiary {
-    color: var(--ter) !important;
-}
-
-.text-primary {
-    color: var(--brand) !important;
-}
-
-.text-primary-light {
-    color: var(--brand-light) !important;
-}
-
-.text-gray {
-    color: #757683;
-}
-
-.is-bold {
-    font-weight: bold !important;
-}
-
 
 a.about-card-footer-item {
     background-color: var(--brand);
@@ -447,14 +295,6 @@ a.about-card-footer-item:hover {
         text-align: center !important;
     }
 
-    .qr-section .is-flex {
-        justify-content: center !important;
-    }
-
-    .card.get-started {
-        margin: auto !important;
-    }
-
     .navbar {
         padding: 0 10px !important;
     }
@@ -462,8 +302,6 @@ a.about-card-footer-item:hover {
     .navbar:has(.navbar-burger.is-active) {
         border-radius: 0 0 20px 20px;
     }
-
-    /* .navbar:not(.navbar .navbar-burger.is-active){} */
 
     .nav-book-btn {
         text-align: right;
@@ -494,20 +332,6 @@ a.about-card-footer-item:hover {
     .navbar-item>.button {
         width: 100%;
     }
-
-    /* 
-    .navbar-burger {
-        margin-left: 0 !important;
-    } */
-
-    /* .tabs.is-toggle.is-toggle-rounded li:first-child a {
-        padding-left: 0.8em !important;
-    }
-
-    .tabs.is-toggle.is-toggle-rounded li:last-child a {
-        padding-right: .8em !important;
-    } */
-
 }
 
 /* Styles for Desktop Screens */
