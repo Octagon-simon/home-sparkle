@@ -26,6 +26,10 @@ img.notFullWidth {
     width: initial !important;
 }
 
+.title.home-title{
+    color: #fff !important;
+}
+
 .navbar {
     padding: 0 3rem;
 }
@@ -366,7 +370,7 @@ a.about-card-footer-item:hover {
     a.navbar-brand-link {
         flex: 1;
         display: inline-flex;
-        justify-content: start;
+        justify-content: flex-start;
     }
 
     .navbar .navbar-brand img {

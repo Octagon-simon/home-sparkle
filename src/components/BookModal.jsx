@@ -6,10 +6,10 @@ const ModalSuccess = ({ showSuccess, setShowSuccess }) => {
 
     return (
         <>
-            <div class={`modal ${(showSuccess) ? 'is-active' : ''}`}>
-                <div class="modal-background"></div>
-                <div class={`modal-content ${styles.successModalContent}`}>
-                    {/* <p class="image is-4by3">
+            <div className={`modal ${(showSuccess) ? 'is-active' : ''}`}>
+                <div className="modal-background"></div>
+                <div className={`modal-content ${styles.successModalContent}`}>
+                    {/* <p className="image is-4by3">
                         <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
                     </p> */}
                     <div className='section-content has-text-centered'>
@@ -18,7 +18,7 @@ const ModalSuccess = ({ showSuccess, setShowSuccess }) => {
                         <button className='button is-black' style={{ borderRadius: '10px' }} onClick={() => setShowSuccess(false)}>Okay</button>
                     </div>
                 </div>
-                <button onClick={() => setShowSuccess(false)} class="modal-close is-large" aria-label="close"></button>
+                <button onClick={() => setShowSuccess(false)} className="modal-close is-large" aria-label="close"></button>
             </div>
         </>
     )
